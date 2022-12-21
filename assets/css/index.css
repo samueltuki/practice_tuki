@@ -1,0 +1,74 @@
+body , html{
+    height:  100vh;
+}
+/* this was edited for media query */
+body {
+
+     margin:0;
+     display: grid;
+     grid-template-columns: 100% ;
+     grid-template-rows: repeat(auto,5);
+     grid-template-areas: 
+     
+     "section1" 
+     "section2"
+     "section3"
+     "main"
+     "footer";
+
+}
+
+aside   {
+    grid-area: sidebar;
+    background-color: blue;
+
+
+}
+
+header {
+    grid-area: header;
+    background-color: brown;
+}
+
+#section1 {
+    grid-area: section1;
+    background-color:yellowgreen ;
+}
+
+#section2 {
+    grid-area: section2;
+    background-color:darkcyan ;
+}
+#section3 {
+    grid-area: section3;
+    background-color:purple;
+}
+
+main {
+    grid-area: main;
+    background-color:lightseagreen;
+}
+
+footer {
+    grid-area: footer;
+    background-color:lightgrey;
+}
+
+@media only screen and (min-width: 700px){
+    body {
+
+        margin:0;
+        display: grid;
+        grid-template-columns: auto 27% 27% 27% ;
+        grid-template-rows: 8% 30% auto 10%;
+        grid-template-areas: 
+    
+        "sidebar header header header"
+        "sidebar section1 section2 section3"
+        "sidebar    main    main      main"
+        "sidebar  footer  footer    footer" ;
+
+   }
+
+
+}
